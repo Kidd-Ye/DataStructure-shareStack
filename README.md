@@ -1,4 +1,2 @@
 # DataStructure-shareStack
-A example of share stack
-Let's make it Right!
-Add
+A example of share stack.

@@ -8,7 +8,7 @@
 
 #include <iostream>
 using namespace std;
-#define maxsize 10
+#define maxsize 100
 
 class ShareStack
 {
@@ -56,7 +56,7 @@ int ShareStack::Pop(int i){
             return data[top2++];
         }
     }
-    exit(0);
+    return 10000;
 }
 
 int ShareStack::GetTop(int i)
@@ -75,7 +75,7 @@ int ShareStack::GetTop(int i)
             return data[top2];
         }
     }
-    exit(0);
+    return 10000;
 }
 
 bool ShareStack::Empty(int i)
@@ -92,7 +92,7 @@ bool ShareStack::Empty(int i)
         }
         else return false;
     }
-    exit(0);
+    return 100000;
 }
 
 int main(int argc, const char * argv[]) {
@@ -104,10 +104,16 @@ int main(int argc, const char * argv[]) {
     s.Push(1, 6);
     s.Push(2, 1);
     s.Push(2, 8);
+    s.Push(2, 9);
+    s.Push(2, 18);
 
     cout << s.Pop(1) << endl;
     cout << s.Pop(1) << endl;
     cout << s.Pop(1) << endl;
+    cout << s.Pop(2) << endl;
+    cout << s.Pop(2) << endl;
+    cout << s.Pop(2) << endl;
+    cout << s.Pop(2) << endl;
     cout << s.Pop(2) << endl;
     
     return 0;

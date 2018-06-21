@@ -21,18 +21,31 @@ private:
     int top1,top2;
 };
 
+void ShareStack::Push(int i, int x)
+{
+    if (top1 == top2-1) {
+        cout<< "stack is full" << endl;
+        return;
+    }
+    if (i == 1) {
+        data[++top1] = x;
+    }
+    if (i == 2) {
+        data[--top2] = x;
+    }
+}
 
 int ShareStack::Pop(int i){
     if (i == 1) {
         if (top1 == -1) {
-            cout<< "stack1 is empty" <<endl;
+            cout << "stack1 is empty" << endl;
         }else{
             return data[top1--];
         }
     }
     if (i == 2) {
         if (top2 == maxsize) {
-            cout<< "stack2 is empty" <<endl;
+            cout << "stack2 is empty" << endl;
         }else{
             return data[top2++];
         }
@@ -44,14 +57,14 @@ int ShareStack::GetTop(int i)
 {
     if (i == 1) {
         if (top1 == -1) {
-            cout<< "stack1 is empty" <<endl;
+            cout << "stack1 is empty" << endl;
         }else{
             return data[top1];
         }
     }
     if (i == 2) {
         if (top1 == maxsize) {
-            cout<< "stack2 is empty" <<endl;
+            cout << "stack2 is empty" << endl;
         }else{
             return data[top2];
         }
@@ -76,18 +89,6 @@ bool ShareStack::Empty(int i)
     return 100000;
 }
 
-void ShareStack::Push(int i, int x)
-{
-    if (top1 == top2-1) {
-        cout<< "stack is full" <<endl;
-        return;
-    }
-    if (i == 1) {
-        data[++top1] = x;
-    }
-    if (i == 2) {
-        data[--top2] = x;
-    }
-}
+
 
 </code></pre>

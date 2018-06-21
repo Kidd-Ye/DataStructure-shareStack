@@ -23,7 +23,7 @@ private:
 void ShareStack::Push(int i, int x)
 {
     if (top1 == top2-1) {
-        cout<< "stack is full."<<endl;
+        cout<< "stack is full" <<endl;
         return;
     }
     if (i == 1) {

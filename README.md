@@ -1,6 +1,7 @@
 # DataStructure-shareStack
 A example of share stack.
 <pre><code>
+
 #define maxsize 100
 
 class ShareStack
@@ -87,4 +88,5 @@ bool ShareStack::Empty(int i)
     }
     return 100000;
 }
+
 </code></pre>

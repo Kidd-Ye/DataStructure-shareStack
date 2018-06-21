@@ -21,19 +21,6 @@ private:
     int top1,top2;
 };
 
-void ShareStack::Push(int i, int x)
-{
-    if (top1 == top2-1) {
-        cout<< "stack is full" <<endl;
-        return;
-    }
-    if (i == 1) {
-        data[++top1] = x;
-    }
-    if (i == 2) {
-        data[--top2] = x;
-    }
-}
 
 int ShareStack::Pop(int i){
     if (i == 1) {
@@ -87,6 +74,20 @@ bool ShareStack::Empty(int i)
         else return false;
     }
     return 100000;
+}
+
+void ShareStack::Push(int i, int x)
+{
+    if (top1 == top2-1) {
+        cout<< "stack is full" <<endl;
+        return;
+    }
+    if (i == 1) {
+        data[++top1] = x;
+    }
+    if (i == 2) {
+        data[--top2] = x;
+    }
 }
 
 </code></pre>
